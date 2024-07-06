@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eaglOS</title>
+    <link rel="icon" type="image/x-ico" href="/img/ico.ico">
+</head>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("/static/img/bg1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255,255,255,0.5);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px;
+        gap: 10px;
+    }
+
+    form input {
+        text-align: center;
+        padding: 10px 40px;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        font-family: "consolas";
+        font-size: 16px;
+        outline: none;
+    }
+
+    .login {
+        width: 100%;
+    }
+
+    .login input {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .username {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .username img {
+        position: absolute;
+        width: 25px;
+        left: 10px;
+    }
+
+    .password {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .password img {
+        position: absolute;
+        width: 25px;
+        left: 10px;
+    }
+
+
+</style>
+
+<body>
+    <form action="" method="post">
+        <img  src="/static/img/ico.ico" width="100">
+        <div class="username">
+            <img src="/static/img/user.png">
+            <input id="username" name="username" type="text" placeholder="Username" required><br>
+        </div>
+        <div class="password">
+            <img style="cursor: pointer;" onclick="changeMode()" src="/static/img/key.png">
+            <input name="password" type="password" placeholder="Password" id="password" required><br>
+        </div>
+        <div class="login">
+            <input style="cursor: pointer;" id="button" type="submit" value="Anmelden">
+        </div>
+    </form>
+</body>
+
+<script>
+
+    function changeMode() {
+        if (password.type == "password") {
+            password.type = "text";
+        }
+        else if (password.type == "text") {
+            password.type = "password";
+        }
+    }
+
+
+
+</script>
+
+</html>
